@@ -29,13 +29,13 @@ async function sendRequest() {
         if (response instanceof Error) {
             // error yes or no
             if (!previousError || previousError.message !== response.message) {
-                console.error(`Hata: ${response.message}`);
+                console.error(`ERROR: ${response.message}`);
                 previousError = response; // error message (404, 296...)
             }
         } else {
             // no error 
             if (!response.ok) {
-                console.error(`HTTP hata kodu: ${response.status}`);
+                console.error(`HTTP error code: ${response.status}`);
             } else {
                 console.log(`${new Date().toLocaleTimeString()} - Başarılı istek gönderildi.`);
             }
