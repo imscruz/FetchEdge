@@ -37,7 +37,7 @@ async function sendRequest() {
             if (!response.ok) {
                 console.error(`HTTP error code: ${response.status}`);
             } else {
-                console.log(`${new Date().toLocaleTimeString()} - Başarılı istek gönderildi.`);
+                console.log(`${new Date().toLocaleTimeString()} - sending...`);
             }
         }
     });
